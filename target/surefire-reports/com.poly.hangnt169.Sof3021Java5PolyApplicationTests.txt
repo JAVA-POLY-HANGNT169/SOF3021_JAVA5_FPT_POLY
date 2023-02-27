@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.poly.hangnt169.Sof3021Java5PolyApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.114 s <<< FAILURE! - in com.poly.hangnt169.Sof3021Java5PolyApplicationTests
+com.poly.hangnt169.Sof3021Java5PolyApplicationTests  Time elapsed: 0.114 s  <<< ERROR!
+java.lang.IllegalStateException: Unable to find a @SpringBootConfiguration, you need to use @ContextConfiguration or @SpringBootTest(classes=...) with your test
+
