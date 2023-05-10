@@ -23,10 +23,9 @@
             <br>
             Hãng:
             <select name="hang">
-                <option value="MSI" ${mayTinh.hang == "MSI" ? "selected" : ""}>MSI</option>
-                <option value="ASUS" ${mayTinh.hang == "ASUS" ? "selected" : ""}>ASUS</option>
-                <option value="ACER" ${mayTinh.hang == "ACER" ? "selected" : ""}>ACER</option>
-                <option value="DELL" ${mayTinh.hang == "DELL" ? "selected" : ""}>DELL</option>
+                <c:forEach items="${hangs }" var="h">
+                    <option value="${h.id}" ${h.id == mayTinh.hang.id ? 'selected="selected"' : ''}>${h.tenHang}</option>
+                </c:forEach>
             </select>
             <br>
             Mô tả: <input type="text" name="moTa" value="${mayTinh.mieuTa}"><br>
@@ -43,7 +42,7 @@
                     <th scope="col">Giá</th>
                     <th scope="col">Bộ nhớ</th>
                     <th scope="col">Màu sắc</th>
-                    <th scope="col">Hãng</th>
+                    <th scope="col">Tên Hãng</th>
                     <th scope="col">Mô Tả</th>
                     <th scope="col">hành động</th>
                 </tr>
@@ -56,7 +55,7 @@
                         <td>${mayTinh.gia}</td>
                         <td>${mayTinh.boNho }</td>
                         <td>${mayTinh.mauSac }</td>
-                        <td>${mayTinh.hang}</td>
+                        <td>${mayTinh.hang.tenHang}</td>
                         <td>${mayTinh.mieuTa}</td>
                         <td>
                             <a class="btn btn-success" href="/may-tinh/detail/${mayTinh.id}">detail</a>

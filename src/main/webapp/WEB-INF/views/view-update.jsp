@@ -27,10 +27,9 @@
     <br>
     Hãng:
     <select name="hang">
-        <option value="MSI" ${mayTinh.hang == "MSI" ? "selected" : ""}>MSI</option>
-        <option value="ASUS" ${mayTinh.hang == "ASUS" ? "selected" : ""}>ASUS</option>
-        <option value="ACER" ${mayTinh.hang == "ACER" ? "selected" : ""}>ACER</option>
-        <option value="DELL" ${mayTinh.hang == "DELL" ? "selected" : ""}>DELL</option>
+        <c:forEach items="${hangs }" var="h">
+            <option value="${h.id}" ${h.id == mayTinh.hang.id ? 'selected="selected"' : ''}>${h.tenHang}</option>
+        </c:forEach>
     </select>
     <br>
     Mô tả: <input type="text" name="moTa" value="${mayTinh.mieuTa}"><br>

@@ -20,7 +20,7 @@ public class MayTinhServiceImpl implements MayTinhService {
 
     @Override
     public Page<MayTinh> getData(int page) {
-        Pageable pageable = PageRequest.of(page, 5);
+        Pageable pageable = PageRequest.of(page, 3);
         return mayTinhRepository.findAll(pageable);
     }
 
